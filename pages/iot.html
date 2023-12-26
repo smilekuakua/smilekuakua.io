@@ -1,82 +1,518 @@
+<!doctype html>
 <html lang="en">
 
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-16x16.png">
-    <title>
-        ISAAC KUAKUA
-    </title>
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <!-- Nucleo Icons -->
-    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
-    <!-- Nepcha Analytics (nepcha.com) -->
-    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="g-sidenav-show  bg-gray-100 virtual-reality">
-    <div>
-        <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-          navbar-scroll="true">
-          <div class="container-fluid py-1 px-3">
-            <nav aria-label="breadcrumb">
-              <p class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Isaac KUAKUA</a></p>
-            </nav>
-            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-              <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-    
-              </div>
-              <ul class="navbar-nav  justify-content-end mx-5">
 
-                <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-                    <a href="../index.html" class="nav-link text-body p-0">
-                      Home
+<body class="bg-white dark:bg-gray-800  ">
+
+    <header class="mt-5">
+        <div class="px-8 mx-auto max-w-7xl">
+            <nav
+                class="   flex flex-wrap items-center justify-between w-fullnpy-4 md:py-0 px-4 bg-white dark:bg-gray-800 dark:text-white-700  ">
+
+                <div>
+                    <a href="#" class="dark:text-white">
+                        LOGO
                     </a>
-      
-                  </li>
-    
-                <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-                  <a href="../pages/about.html" class="nav-link text-body p-0">
-                    About me
-                  </a>
-    
-                </li>
-                <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-                  <a href="../pages/cs.html" class="nav-link text-body p-0" >
-                    Cyber Security
-                  </a>
-    
-                </li>
-                <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-                  <a href="" class="nav-link text-body p-0 active" >
-                    IOT
-                  </a>
-    
-                </li>
-              </ul>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-button"
+                    class="h-6 w-6 cursor-pointer md:hidden block dark:text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                    <ul class="
+                      pt-4
+                      text-base text-gray-700 dark:text-white
+                      md:flex
+                      md:justify-between 
+                      md:pt-0">
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="security.html">Cyber Security</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400 text-blue-600" href="iot.html">IoT</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400 " href="seminar.html">Seminars</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="about.html">About</a>
+                        </li>
+
+                        <li class=" ">
+
+                            <button id="theme-toggle" type="button"
+                                class="text-gray-500  dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mt-2">
+                                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                    </path>
+                                </svg>
+                                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+    </header>
+
+
+    <main class="px-8 mx-auto max-w-7xl">
+
+        <div>
+            <h4 class="mt-12 text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
+                The Internet of Things
+            </h4>
+            <p class="mt-4  mb-12 text-lg leading-6 text-gray-500 dark:text-gray-300 animation">
+                The Internet of Things (IoT) refers to the interconnected network of physical devices that
+                communicate and exchange data with each other through the internet. While IoT brings numerous
+                benefits, such as increased efficiency, automation, and improved data analytics, it also
+                introduces significant cybersecurity challenges.
+
+                <br><br>
+
+                IoT (Internet of Things) is a rapidly growing field with the potential to revolutionize our lives. As a
+                student, I have been interested in exploring the potential of IoT in various areas, such as healthcare,
+                smart cities, and environmental monitoring.
+                <br><br>
+                One of the most exciting aspects of IoT is the ability to connect devices and collect data from them in
+                real-time. This data can then be used to improve efficiency, optimize resource allocation, and make more
+                informed decisions.
+                <br><br>
+                For example, IoT sensors can be used to monitor the health of patients in hospitals, track the location
+                of assets in warehouses, and measure the quality of air and water. This data can then be used to improve
+                patient care, optimize supply chain management, and ensure environmental sustainability.
+                <br><br>
+                I have built several IoT projects in my spare time, including a smart home system, a remote monitoring
+                system for medical devices, and an environmental monitoring system. These projects have allowed me to
+                gain valuable hands-on experience with IoT technologies and explore the potential of IoT to solve
+                real-world problems.
+                <br><br>
+                The most challenging project I have worked on was a smart home system that uses sensors to control the
+                temperature, lighting, and security of a home. The biggest challenge was integrating all of the
+                different sensors and actuators into a single system and then programming the system to respond to the
+                data it is collecting.
+                <br><br>
+                I overcame this challenge by breaking down the project into smaller, more manageable tasks. I also spent
+                a lot of time researching and experimenting to find the best solutions for each task.
+
+                <br><br>
+                <span class="text-blue-400 font-extrabold mt-3"> The key features of my smart home system
+                    include:</span>
+
+                <br><br>
+
+                Ability to control the temperature of the home automatically based on the current temperature and the
+                user's preferences. <br>
+                Ability to control the lighting of the home automatically based on the user's presence and the desired
+                ambiance. <br>
+                Ability to control the security system of the home automatically based on the user's presence and the
+                time of day. <br>
+
+                I am excited to continue exploring the potential of IoT and see how it can be used to improve our lives.
+                I believe that IoT has the potential to make our world a more efficient, sustainable, and connected
+                place.
+
+
+
+            </p>
+        </div>
+
+        <div class="accordion  rounded-t-lg bg-white  dark:bg-gray-800 dark:text-white">
+
+
+            <div class="accordion-item">
+                <div class="accordion-header p-4 text-white bg-blue-400 rounded-t-md dark:bg-gray-600"
+                    onclick="toggleAccordion(this)">
+                    IoT and Smart City
+
+                </div>
+
+                <div class="accordion-content p-4 " style="display: none;">
+
+
+                    <br> <br>
+                    <div class="mb-4">
+                        <img src="../images/Iot1.jpg" alt="" srcset="">
+                    </div>
+                    The Internet of Things (IoT) has the potential to revolutionize the way smart cities deliver public
+                    services. By connecting a vast array of devices and sensors, IoT can provide real-time data and
+                    insights that can be used to improve efficiency, optimize resource allocation, and enhance public
+                    safety. Here are some specific examples of how IoT can help smart cities improve public services:
+
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3">Smart Traffic Management</span> <br><br>
+
+
+                 
+
+                    IoT-enabled traffic sensors can collect data on traffic flow, road conditions, and parking
+                    availability. This data can be used to optimize traffic signals, route buses and taxis more
+                    efficiently, and provide drivers with real-time traffic updates. This can lead to reduced
+                    congestion, shorter commute times, and improved air quality.
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3">Smart Public Utilities </span> <br><br>
+
+
+                    IoT sensors can monitor water usage, energy consumption, and waste generation in smart cities. This
+                    data can be used to identify leaks, optimize energy use, and reduce waste disposal costs. This can
+                    lead to more sustainable and cost-effective public utilities.
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3"> Smart Waste Management </span> <br><br>
+
+
+                    IoT-enabled waste collection vehicles can use sensors to track their location and fill levels. This
+                    data can be used to schedule collection routes more efficiently and prevent overflowing bins. This
+                    can reduce waste collection costs and improve aesthetics in urban areas.
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3"> Smart Public Lighting </span> <br><br>
+
+
+                    IoT-enabled streetlights can be equipped with sensors to adjust their brightness based on ambient
+                    light levels. This can save energy and improve public safety by providing adequate lighting in dark
+                    areas.
+                    <br><br><span class="text-blue-400 font-extrabold mt-3">Smart Parking</span> <br><br>
+
+
+                    IoT-enabled parking meters and sensors can provide real-time information on available parking
+                    spaces. This information can be displayed on smartphone apps and digital signage, allowing drivers
+                    to find parking more easily. This can reduce traffic congestion and improve the overall driving
+                    experience.
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3">Smart Public Safety</span> <br><br>
+
+
+                    IoT sensors can be used to monitor crime hotspots, detect suspicious activity, and alert authorities
+                    to potential emergencies. This can help to deter crime, improve response times, and make communities
+                    safer.
+
+                    <br><br><span class="text-blue-400 font-extrabold mt-3">Smart Social Services</span> <br><br>
+
+
+                    IoT-enabled devices can be used to monitor the health and well-being of elderly or vulnerable
+                    individuals. This data can be used to identify potential problems and provide timely support. This
+                    can help to improve the quality of life for these individuals and reduce the burden on social
+                    services.
+
+                    In addition to these specific examples, IoT can also be used to improve public services in a more
+                    general sense by providing a platform for real-time data collection, analysis, and decision-making.
+                    This can help cities to become more responsive to the needs of their citizens and to improve the
+                    overall quality of life in urban areas.
+
+
+
+                </div>
+
             </div>
-          </div>
-        </nav>
-        <!-- End Navbar -->
-        <main>
-            Welcome Iot 
-        </main>
-   
 
-    </div>
 
-    
+            <div class="accordion-item">
+                <div class="accordion-header p-4 text-white bg-blue-400  dark:bg-gray-600"
+                    onclick="toggleAccordion(this)">
+                    IoT and Local Authority
 
+                </div>
+
+                <div class="accordion-content p-4 " style="display: none;">
+
+
+                    <br> <br>
+                    <div class="mb-4">
+                        <img src="../images/shutterstock_1794833188.webp" alt="" srcset="">
+                    </div>
+
+                    The Internet of Things (IoT) has the potential to revolutionize the way local authorities operate
+                    and improve city life in numerous ways. By connecting a vast network of devices and sensors, IoT can
+                    collect real-time data on everything from traffic patterns to air quality, enabling authorities to
+                    make informed decisions and implement changes that enhance the well-being of residents. Here are
+                    some specific examples of how IoT can help local authorities improve city life:
+
+
+
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Traffic Management and Optimization:</span>
+                    IoT sensors embedded in traffic lights, road surfaces, and
+                    vehicles can provide real-time data on traffic conditions, enabling authorities to adjust traffic
+                    signals, optimize route planning, and even deploy dynamic parking management systems. This can lead
+                    to reduced congestion, improved travel times, and enhanced air quality.
+
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Smart Parking Solutions:</span>
+                    IoT sensors in parking garages and on-street parking spaces can provide
+                    real-time information on available parking spots, allowing drivers to find parking more efficiently
+                    and reducing the need for circling and searching. This can save time, reduce emissions, and improve
+                    overall traffic flow.
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Sustainability and Environmental
+                        Monitoring:</span>
+                    IoT devices can monitor energy consumption in public
+                    buildings, street lighting, and waste management systems, enabling authorities to identify and
+                    address inefficiencies. They can also collect real-time data on water usage, air quality, and noise
+                    levels, helping to identify and address environmental issues.
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Public Safety and Infrastructure
+                        Maintenance:</span>
+                    IoT sensors can monitor the condition of bridges,
+                    roads, and other critical infrastructure, providing early warning of potential problems. They can
+                    also be used to track the location and condition of public assets, such as street furniture and
+                    public restrooms, enabling authorities to prioritize maintenance and replacement.
+
+                    <br><br><span class="text-blue-400 font-bold mt-3">Citizen Engagement and Information
+                        Services:</span>
+                    IoT-enabled smart city applications can provide
+                    residents with real-time information on public transportation schedules, traffic conditions, events,
+                    and emergency alerts. They can also facilitate citizen feedback and participation in local
+                    governance processes.
+
+                    <br><br><span class="text-blue-400 font-bold mt-3">Smart Waste Management:</span>
+                    IoT sensors can monitor waste containers, track waste collection routes, and
+                    optimize waste collection schedules. They can also provide data on recycling and composting
+                    practices, helping to improve waste diversion rates.
+                    <br><br><span class="text-blue-400 font-bold mt-3">Smart Lighting Solutions:</span>
+                    IoT-enabled LED streetlights can be dimmed or turned off remotely,
+                    reducing energy consumption and improving safety for pedestrians and cyclists. They can also be
+                    equipped with sensors to adjust brightness based on ambient light conditions, further optimizing
+                    energy efficiency.
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Smart Grid Management:</span>
+                    IoT devices can monitor power consumption in homes and businesses, providing
+                    insights into energy usage patterns and enabling authorities to develop more efficient energy
+                    policies. They can also facilitate the integration of renewable energy sources into the grid.
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Smart Urban Planning and Design:</span>
+                    IoT data can be used to analyze population density, traffic
+                    patterns, and environmental trends, providing valuable insights for urban planning and development.
+                    This can help to create more livable, sustainable, and equitable cities.
+                    <br><br><span class="text-blue-400 font-bold mt-3"> Emergency Response and Disaster
+                        Management:</span>
+                    IoT devices can provide real-time information on
+                    building occupancy, traffic congestion, and infrastructure damage during emergencies, enabling
+                    authorities to prioritize response efforts and minimize disruption.
+
+
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header p-4 text-white bg-blue-400 dark:bg-gray-600"
+                    onclick="toggleAccordion(this)">
+                    Iot and automobile industry
+                </div>
+                <div class="accordion-content bg-white text-black  p-4 " style="display: none;">
+
+                    <div class="mb-4">
+                        <img src="../images/AV Siemens.jpg" alt="" srcset="">
+                    </div> <br> <br>
+                    The Internet of Things (IoT) is having a profound impact on the automobile industry, leading to the
+                    development of connected cars, autonomous vehicles, and smart transportation systems. Connected cars
+                    use IoT technology to collect and exchange data with other vehicles, infrastructure, and the cloud.
+                    This data can be used to improve safety, efficiency, and convenience. Autonomous vehicles use IoT
+                    technology to navigate roads and avoid obstacles without human intervention. Smart transportation
+                    systems use IoT technology to optimize traffic flow, reduce congestion, and improve air quality.
+
+                    Here are some specific examples of how IoT is being used in the automobile industry:
+
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Connected cars:</span>
+                    Connected cars can use IoT technology to communicate with each other,
+                    infrastructure, and the cloud. This data can be used to provide drivers with real-time traffic
+                    information, weather updates, and service alerts. It can also be used to improve safety by alerting
+                    drivers to potential hazards and warning them of impending collisions.
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Autonomous vehicles: </span> Autonomous vehicles use
+                    a variety of IoT sensors, including cameras,
+                    radar, and lidar, to perceive their surroundings. This data is processed by artificial intelligence
+                    (AI) algorithms to control the vehicle's movements. IoT technology is also used to communicate with
+                    other vehicles and infrastructure to ensure the safe operation of autonomous vehicles.
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Smart transportation systems: </span> Smart
+                    transportation systems use IoT technology to collect and
+                    analyze data about traffic flow, road conditions, and public transportation usage. This data can be
+                    used to optimize traffic signals, adjust public transportation schedules, and even reroute drivers
+                    around congestion. IoT technology is also used to provide real-time information to drivers and
+                    passengers about public transportation options and traffic conditions.
+                    <br><br>
+                    <span class="text-blue-400 mt-3"> Conclusion</span><br><br>
+                    The use of IoT in the automobile industry is still in its early stages, but it has the potential to
+                    revolutionize the way we drive, move around, and interact with our vehicles. As IoT technology
+                    continues to develop, we can expect to see even more innovative and transformative applications in
+                    the automotive sector.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header p-4 text-white  bg-blue-400 dark:bg-gray-600"
+                    onclick="toggleAccordion(this)">
+                    IoT and healthcare
+                </div>
+                <div class="accordion-content bg-white text-black  p-4 " style="display: none;">
+
+                    <div class="mb-4">
+                        <img src="../images/blog-25-image.jpg" alt="" srcset="">
+                    </div> <br> <br>
+                    The Internet of Things (IoT) is having a profound impact on healthcare, transforming the way we
+                    deliver, manage, and experience healthcare. By connecting devices and sensors to the internet, IoT
+                    is enabling a new era of personalized, preventive, and predictive healthcare.
+                    <br><br>
+                    <span class="text-blue-400 font-extrabold mt-3">Benefits of IoT in Healthcare</span><br> <br>
+
+                    <span class="text-blue-400 font-bold mt-3">Remote Patient Monitoring (RPM):</span>
+                    IoT devices can continuously monitor patient vital signs,
+                    such as heart rate, blood pressure, and oxygen levels, from the comfort of their home. This allows
+                    healthcare professionals to identify potential problems early on and take proactive measures to
+                    prevent complications.
+
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Prescription Adherence:</span> IoT devices can track
+                    medication adherence by monitoring when and how
+                    patients take their medications. This can help to improve treatment outcomes and reduce the risk of
+                    hospital readmissions.
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Personalized Medicine:</span>
+                    IoT data can be used to develop personalized treatment plans for each
+                    patient. This can lead to more effective and targeted therapies.
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3">Predictive Analytics: </span>
+                    IoT devices can collect data on patient behavior and health patterns.
+                    This data can be used to develop predictive models that can identify patients at risk of developing
+                    chronic diseases.
+                    <br><br>
+                    <span class="text-blue-400 font-bold mt-3"> Hospital Automation: </span>
+                    IoT devices can automate tasks in hospitals, such as managing patient
+                    rooms, tracking supplies, and maintaining equipment. This can free up healthcare workers to focus on
+                    patient care.
+                    <br><br>
+                    <span class="text-blue-400 font-extrabold mt-3"> Examples of IoT Applications in
+                        Healthcare</span><br> <br>
+                    <span class="text-blue-400 font-bold mt-3">Wearable devices:</span>
+
+                    Smartwatches, fitness trackers, and other wearable devices can collect data
+                    on heart rate, sleep patterns, and activity levels. This data can be used to monitor patient health
+                    and identify potential problems.
+                    <br> <br>
+                    <span class="text-blue-400 font-bold mt-3">Hospital beds and equipment:</span>
+                    IoT-enabled hospital beds can monitor patient vital signs and
+                    adjust settings automatically. IoT-enabled equipment, such as ventilators and infusion pumps, can be
+                    tracked in real time to ensure they are functioning properly.
+                    <br> <br>
+                    <span class="text-blue-400 font-bold mt-3"> Telemedicine:</span>
+                    IoT devices can enable telemedicine visits, allowing patients to connect with
+                    healthcare providers remotely. This can be especially beneficial for patients in rural areas or
+                    those with limited mobility.
+                    <br><br>
+                    <span class="text-blue-400 font-extrabold mt-3">Challenges of IoT in Healthcare</span><br> <br>
+                    <span class="text-blue-400 font-bold mt-3"> Data security and privacy:</span>
+                    IoT devices collect a vast amount of personal health data, which
+                    must be protected from unauthorized access.
+                    <br> <br>
+                    <span class="text-blue-400 font-bold mt-3"> Interoperability:</span>
+                    Different IoT devices from different vendors may not be able to communicate
+                    with each other. This can make it difficult to integrate data from multiple sources.
+                    <br> <br>
+                    <span class="text-blue-400 font-bold mt-3"> Data interpretation: </span>
+                    The sheer volume of data collected by IoT devices can be overwhelming.
+                    Healthcare professionals need tools to help them analyze and interpret this data effectively.
+                    <br> <br>
+                    <span class="text-blue-400 font-bold mt-3"> Cost:</span>
+                    IoT devices can be expensive, which can limit their adoption among healthcare providers.
+
+                    Despite these challenges, the potential benefits of IoT in healthcare are significant. As
+                    technology continues to evolve, we can expect to see even more innovative applications of IoT in the
+                    years to come.
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+
+
+    <footer class="bg-white dark:bg-gray-800 w-full py-8">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <ul class="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="security.html">Cyber Security</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400 text-blue-600" href="iot.html">IoT</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400 " href="seminar.html">Seminars</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="about.html">About</a>
+                </li>
+
+            </ul>
+            <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
+                <a href="https://www.facebook.com/isa.kuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/isaac_kuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/smilekuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792">
+                        <path
+                            d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/isaac-kuakua-mat?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z">
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../path/to/flowbite/dist/flowbite.bundle.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

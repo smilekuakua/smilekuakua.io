@@ -1,185 +1,341 @@
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png">
-  <title>
-    ISAAC KUAKUA
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
-  <!-- Nepcha Analytics (nepcha.com) -->
-  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
+<body class="bg-white dark:bg-gray-800  shadow">
 
-<body class="g-sidenav-show  bg-gray-100 virtual-reality">
-  <div>
-    <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-      navbar-scroll="true">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <p class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Isaac KUAKUA</a></p>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+    <header class="mt-5">
+        <div class="px-8 mx-auto max-w-7xl">
+            <nav
+                class="   flex flex-wrap items-center justify-between w-fullnpy-4 md:py-0 px-4 bg-white dark:bg-gray-800 dark:text-white-700  ">
 
-          </div>
-          <ul class="navbar-nav  justify-content-end mx-5">
+                <div>
+                    <a href="#" class="dark:text-white">
+                        LOGO
+                    </a>
+                </div>
 
-            <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-              <a href="pages/about.html" class="nav-link text-body p-0">
-                About me
-              </a>
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-button"
+                    class="h-6 w-6 cursor-pointer md:hidden block dark:text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
 
-            </li>
-            <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-              <a href="pages/cs.html" class="nav-link text-body p-0">
-                Cyber Security
-              </a>
+                <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                    <ul class="
+                      pt-4
+                      text-base text-gray-700 dark:text-white
+                      md:flex
+                      md:justify-between 
+                      md:pt-0">
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400  text-blue-600" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/security.html">Cyber
+                                Security</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/iot.html">IoT</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400 " href="pages/seminar.html">Seminars</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/about.html">About</a>
+                        </li>
 
-            </li>
-            <li class="nav-item dropdown pe-2 d-flex align-items-center mx-2">
-              <a href="pages/iot.html" class="nav-link text-body p-0">
-                IOT
-              </a>
+                        <li class=" ">
 
-            </li>
-          </ul>
+                            <button id="theme-toggle" type="button"
+                                class="text-gray-500  dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mt-2">
+                                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                    </path>
+                                </svg>
+                                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="bg-white dark:bg-gray-800 overflow-hidden relative lg:flex lg:items-center">
+                <div class="w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+                    <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+                        <span class="block uppercase animation">
+                            isaac matalatala kuakua
+                        </span>
+                    </h2>
+                    <p class="text-md mt-12 text-gray-400 animation">
+                        As you reflect on the corridors of your educational voyage, envision the mosaic of experiences
+                        that have woven together to create the intricate fabric of your learning journey. Each step, a
+                        brushstroke on the canvas of your intellectual landscape, contributing to the masterpiece of
+                        your personal and professional development.
+                    </p>
+                    <div class="lg:mt-0 lg:flex-shrink-0">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <button type="button"
+                                class="py-2 px-4  bg-blue-500 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                Read more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-8 p-8 lg:p-24 " style="max-width: 600px; ">
+
+                    <img src="images/1.jpg"
+                        class=" transition ease-in-out w-1/2 rounded-lg hover:rotate-12 duration-200" alt="Tree" />
+
+
+                    <div>
+                        <img src="images/2.jpg"
+                            class="transition duration-200 ease-in-out mb-8 rounded-lg hover:rotate-12" alt="Tree" />
+                        <img src="images/3.jpeg" class=" transition duration-200 ease-in-out rounded-lg hover:rotate-12"
+                            alt="Tree" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
-    <div class="border-radius-xl mt-3 mx-3 position-relative" style="background-image: url() ; background-size: cover;">
-      <span class="mask bg-gray-100 border-radius-lg"> </span>
-      <main class="main-content mt-1 border-radius-lg">
-        <div class="section min-vh-85 position-relative transform-scale-0 transform-scale-md-7 p-3">
+    </header>
 
-          <div class="row mt-4 mb-4">
-            <div class="col  h-50">
-              <div class="card">
-                <div class="card-body p-6">
-                  <div class="row">
-                    <div class="col-lg-9">
-                      <div class="d-flex flex-column h-100">
-                        <p class="mb-1 pt-2 text-bold">Hello,</p>
-                        <h5 class="font-weight-bolder"> I'm Isaac Kuakua,</h5>
-                        <p class="mb-5">I'm excited to share my journey and experiences as a last-semester Information
-                          Technology student at Eastern Mediterranean University. In this portfolio, you'll discover my
-                          passion for technology, my academic achievements, and the projects I've worked on.
+    <div class="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-20">
+        <div class="relative">
+            <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div class="ml-auto lg:col-start-2 lg:max-w-2xl">
 
+                    <h4
+                        class="mt-2 text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
+                        IoT and Cyber Security
+                    </h4>
+                    <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300 animation">
+                        The Internet of Things (IoT) refers to the interconnected network of physical devices that
+                        communicate and exchange data with each other through the internet. While IoT brings numerous
+                        benefits, such as increased efficiency, automation, and improved data analytics, it also
+                        introduces significant cybersecurity challenges.
+                    </p>
+                    <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300 animation">
+                        Cybersecurity, or computer security, involves the practice of protecting systems, networks, and
+                        programs from digital attacks, damage, or unauthorized access. As technology becomes
+                        increasingly integral to our daily lives and business operations, the importance of
+                        cybersecurity continues to grow.
+                    </p>
+
+                </div>
+                <div class="relative mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
+                    <div class="relative space-y-4">
+                        <div class="flex items-end justify-center space-x-4 lg:justify-start">
+                            <img class="w-32 rounded-lg shadow-lg md:w-56" width="260" src="images/cybersecurity.png"
+                                alt="1" />
+                            <img class="w-40 rounded-lg shadow-lg md:w-64" width="200" src="images/iot.jpeg" alt="2" />
+                        </div>
+                        <div class="flex items-start justify-center ml-12 space-x-4 lg:justify-start">
+                            <img class="w-24 rounded-lg shadow-lg md:w-40" width="170" src="images/iot2.png" alt="3" />
+                            <img class="w-32 rounded-lg shadow-lg md:w-56" width="200" src="images/secuirty.jpg"
+                                alt="4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <main class="px-8 mx-auto max-w-7xl">
+
+        <div class="grid gap-4  md:grid-cols-2 mt-4">
+
+            <div class="flex items-center justify-center px-5 py-5 ">
+                <div
+                    class="w-full max-w-xl px-5 pt-5 pb-10 mx-auto text-gray-800 bg-white rounded-lg shadow-lg dark:bg-gray-600 dark:text-gray-50 hover:bg-blue-400 hover:text-white ">
+
+                    <div class="w-full mb-10 animation">
+                        <div class="h-3 text-3xl leading-tight text-left ">
+                            “
+                        </div>
+                        <p class="px-5 text-sm text-center  dark:text-gray-100">
+                            In the world of the Internet of Things, it's not about the things; it's about the data.
                         </p>
-                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="pages/about.html">
-                          Read More
-                          <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                        </a>
-                      </div>
+                        <div class="h-3 -mt-3 text-3xl leading-tight text-right ">
+                            ”
+                        </div>
                     </div>
-                    <div class="col">
-                      <div class="bg-gradient-primary  ">
-                        <img src="assets/img/profile.jpg" height="300px" width="200px"
-                          class="col-3 position-absolute top-3  d-lg-block d-none border-radius-xl p-3" alt="waves">
-                      </div>
+                    <div class="w-full">
+                        <p class="font-bold text-center text-md">
+                            Chris Anderson
+                        </p>
+
                     </div>
-
-                  </div>
                 </div>
-              </div>
             </div>
 
-          </div>
 
-          <div class="row mt-4 mb-4">
-            <div class="col-lg-6 col-md-6  mb-4">
-              <div class="card move-on-hover "
-                style="background-image: url('assets/img/cs.jpg') ; background-size: cover; min-height: 300px;">
-                <span class="mask bg-gradient-dark"></span>
-                <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                  <h5 class="text-white font-weight-bolder mb-4 pt-2">Cyber Security</h5>
-                  <p class="text-white">Cyber security is the practice of defending computers, servers, mobile devices,
-                    electronic systems, networks, and data from malicious attacks. It's also known as information
-                    technology security or electronic information security. The term applies in a variety of contexts,
-                    from business to mobile computing, and can be divided into a few common categories.</p>
-                  <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="pages/cs.html">
-                    Read More
-                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                  </a>
+            <div class="flex items-center justify-center px-5 py-5">
+                <div
+                    class="w-full max-w-xl px-5 pt-5 pb-10 mx-auto text-gray-800 hover:bg-blue-400 bg-white rounded-lg shadow-lg dark:bg-gray-600 dark:text-gray-50   hover:text-white">
+
+                    <div class="w-full mb-10 animation">
+                        <div class="h-3 text-3xl leading-tight text-left ">
+                            “
+                        </div>
+                        <p class="px-5 text-sm text-center  dark:text-gray-100 ">
+                            Cybersecurity is not just about protecting digital information; it's also about protecting
+                            our way of life.
+                        </p>
+                        <div class="h-3 -mt-3 text-3xl leading-tight text-right ">
+                            ”
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <p class="font-bold text-center text-md">
+                            James Scott
+                        </p>
+
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-6 col-md-6 ">
-              <div class="card move-on-hover "
-                style="background-image: url('assets/img/iot.avif') ; background-size: cover; min-height: 300px;">
-                <span class="mask bg-gradient-dark"></span>
-                <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                  <h5 class="text-white font-weight-bolder mb-4 pt-2">The internet of things (IoT)</h5>
-                  <p class="text-white">The Internet of things (IoT) describes devices with sensors, processing ability,
-                    software and other technologies that connect and exchange data with other devices and systems over
-                    the Internet or other communications networks.</p>
-
-                  <a class=" text-sm font-weight-bold mb-0 text-white icon-move-right mt-auto" href="pages/iot.html">
-                    Read More
-                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
 
 
         </div>
-    </div>
+
+
+
+
+        <div class="px-4 py-12 bg-lightblue  text-gray-500 dark:text-gray-200">
+            <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
+
+                <div class="w-full mr-8 text-3xl font-extrabold leading-9 md:w-1/3 ">
+                    <div class=" p-2 hover:border-2 hover:border-blue-400  rounded-lg ">
+                        <img src="images/4.jpg" class=" rounded-lg " alt="Tree" />
+                    </div>
+
+
+                </div>
+                <dl class="w-full md:w-2/3 mt-8">
+                    <dt class="mb-4">
+                        <h3 class="text-xl font-semibold">
+                            Who is ISAAC KUAKUA?
+                        </h3>
+                    </dt>
+                    <dd class="mb-16 animation">
+                        <p>
+                            Hey there! 👋 I'm ISAAC KUAKUA, a final-year Information Technology rockstar with an
+                            insatiable appetite for coding and electronics. 🌐 After conquering the realm of industrial
+                            informatics and network wizardry for three glorious years, I took my talents to the
+                            captivating island of Cyprus, where I'm currently basking in the glory of my fourth year in
+                            the IT universe.
+                        </p>
+                    </dd>
+                    <dt class="mb-4">
+                        <h3 class="text-xl font-semibold">
+                            Why IT field?
+                        </h3>
+                    </dt>
+                    <dd class="mb-16 animation">
+                        <p>Technology is constantly evolving, and IT professionals often need to engage in continuous
+                            learning to stay relevant. If you enjoy learning and adapting to new technologies, just
+                            follow me and join us in IT or all other technological fields.
+                        </p>
+                    </dd>
+                    <dt class="mb-4">
+                        <h3 class="text-xl font-semibold">
+                            why Iot and Cyber Security?
+                        </h3>
+                    </dt>
+                    <dd class="mb-16 animation">
+                        <p>
+                            Mainly it was beceause of Iot and after this semester I got evole and start enjoying cyber
+                            security. Now all i can say is none is save so let's secure our assets.
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
     </main>
-  </div>
-  <footer class="footer pt-3  ">
-    <div class="container-fluid">
-      <div class="row align-items-center justify-content-lg-between">
-        <div class="col-lg-6 mb-lg-0 mb-4">
-          <div class="copyright text-center text-sm text-muted text-lg-start">
-            ©
-            <script>
-              document.write(new Date().getFullYear())
-            </script>
 
-          </div>
+
+
+    <footer class="bg-white dark:bg-gray-800 w-full py-8">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <ul class="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400  text-blue-600" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/security.html">Cyber Security</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/iot.html">IoT</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400 " href="pages/seminar.html">Seminars</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-blue-400" href="pages/about.html">About</a>
+                </li>
+
+            </ul>
+            <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
+                <a href="https://www.facebook.com/isa.kuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/isaac_kuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/smilekuakua"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792">
+                        <path
+                            d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/isaac-kuakua-mat?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    class="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+                    <svg width="20" height="20" fill="currentColor"
+                        class="text-xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+                        viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z">
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </footer>
-  </div>
-  <!--   Core JS Files   -->
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+    <script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
